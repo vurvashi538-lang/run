@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro Runner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="game">
+
+    <!-- HUD -->
+    <div class="hud">
+        <div>🏆 Score: <span id="score">0</span></div>
+        <div>🪙 Coins: <span id="coins">0</span></div>
+    </div>
+
+    <!-- START -->
+    <div id="startScreen" class="screen">
+        <h1>🏃 METRO RUNNER</h1>
+        <p>Run • Jump • Collect • Dodge</p>
+
+        <button onclick="startGame()">START GAME</button>
+
+        <small>
+            ← → Move &nbsp; | &nbsp; ↑ Jump &nbsp; | &nbsp; ↓ Slide
+        </small>
+    </div>
+
+    <!-- GAME OVER -->
+    <div id="gameOverScreen" class="screen hidden">
+        <h1>💥 GAME OVER</h1>
+
+        <p>
+            Score: <span id="finalScore">0</span>
+        </p>
+
+        <button onclick="startGame()">PLAY AGAIN</button>
+    </div>
+
+    <!-- GAME WORLD -->
+    <div id="world">
+
+        <div class="background"></div>
+
+        <!-- TRACK -->
+        <div id="track">
+
+            <div class="rail rail1"></div>
+            <div class="rail rail2"></div>
+            <div class="rail rail3"></div>
+            <div class="rail rail4"></div>
+
+            <!-- PLAYER -->
+            <div id="player">
+                <div class="character"></div>
+            </div>
+
+            <!-- OBJECTS -->
+            <div id="objects"></div>
+
+        </div>
+
+    </div>
+
+    <!-- MOBILE BUTTONS -->
+    <div class="mobileControls">
+        <button onclick="moveLeft()">⬅️</button>
+        <button onclick="jump()">⬆️</button>
+        <button onclick="moveRight()">➡️</button>
+        <button onclick="slide()">⬇️</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
